@@ -5,14 +5,14 @@ const express = require('express');
 const app = express();
 
 const server = http.Server(app);
-// Pass a http.Server instance to the listen method
-const io = require('socket.io')(server);
 
 const users = {}
 
 // The server should start listening
 server.listen(3000);
 
+// Pass a http.Server instance to the listen method
+const io = require('socket.io')(server);
 // Register the index route of your app that returns the HTML file
 app.get('/', (req, res) => {
     console.log("Homepage");
