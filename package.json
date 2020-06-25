@@ -1,17 +1,14 @@
 {
-    "name": "nodeserver",
-    "version": "1.0.0",
-    "description": "This is a node Server for our weChat App ",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Jatin Bansal",
-    "license": "ISC",
-    "dependencies": {
-        "socket.io": "^2.3.0"
-    },
-    "engines": {
-        "node": "12.18.0"
-    }
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "This is Live chat app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jatin bansal",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  }
 }
