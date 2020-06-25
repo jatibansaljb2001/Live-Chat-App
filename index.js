@@ -1,6 +1,12 @@
 // This is the main file of our Node Server to handle requets of socket.io
 
 const io = require('socket.io')(8000)
+const express = require('express')
+const app = express()
+const PORT = process.env.PORT || 5000;
+
+app.get('/', (req, res) => res.render('index.html'))
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
 
 const users = {}
 
