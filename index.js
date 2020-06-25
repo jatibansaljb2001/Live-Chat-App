@@ -1,27 +1,16 @@
 // This is the main file of our Node Server to handle requets of socket.io
 
-const http = require('http');
-const express = require('express');
-const app = express();
-
-const server = http.Server(app);
+const app = require('http').createServer(handler);
+const io = require('socket.io')(app);
+app.listen(80);
 
 const users = {}
 
-// The server should start listening
-server.listen(3000);
-
-// Pass a http.Server instance to the listen method
-const io = require('socket.io')(server);
-
-// Register the index route of your app that returns the HTML file
-app.get('/', (req, res) => {
+var handler = (req, res) => {
     console.log("Homepage");
     res.sendFile(__dirname + '/js/client.js');
-});
+}
 
-// Expose the node_modules folder as static resources (to access socket.io.js in the browser)
-app.use('/static', express.static('node_modules'));
 
 
 // Handle connection
