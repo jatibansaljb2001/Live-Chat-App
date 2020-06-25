@@ -11,7 +11,7 @@ const io = require('socket.io')(server);
 const users = {}
 
 // The server should start listening
-server.listen(80);
+server.listen(3000);
 
 // Register the index route of your app that returns the HTML file
 app.get('/', (req, res) => {
