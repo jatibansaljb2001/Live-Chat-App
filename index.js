@@ -13,6 +13,7 @@ server.listen(3000);
 
 // Pass a http.Server instance to the listen method
 const io = require('socket.io')(server);
+
 // Register the index route of your app that returns the HTML file
 app.get('/', (req, res) => {
     console.log("Homepage");
